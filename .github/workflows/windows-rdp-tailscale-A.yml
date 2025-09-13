@@ -1,7 +1,5 @@
 name: Windows RDP via Tailscale (A)
 
-
-
 on:
 
   workflow_dispatch:
@@ -122,11 +120,9 @@ jobs:
 
           RAW_LOOPS:    ${{ inputs.loops || '0' }}
 
-        run: |
+          run: |
 
           function ToIntOr($v, $def){ if("$v" -match '^\d+$'){[int]$v}else{[int]$def} }
-
-
 
           $tailnet = $env:RAW_TAILNET
 
